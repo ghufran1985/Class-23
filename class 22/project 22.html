@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Sum of argument and math objects</p>
+    <p id="demo"></p>
+    <p id="trig-values"></p>
+    
+    <script>
+        function sumAll() {
+            var sum = 0;
+            for (var i = 0; i < arguments.length; i++) {
+                sum += arguments[i];
+            }
+            return sum;
+        }
+
+        document.getElementById("demo").innerHTML = "Sum: " + sumAll(1, 202020202303, 37589393772, 934839, 334543, 3838448, 8383883883833);
+
+        var value = Math.sin(49);
+        var value1 = Math.cos(73);
+        var value2 = Math.tan(73);
+
+        document.getElementById("trig-values").innerHTML = 
+            "Sin 49 is: " + value + "<br>" +
+            "Cos 73 is: " + value1 + "<br>" +
+            "Tan 73 is: " + value2 + "<br>";
+    </script>
+</body>
+</html>
